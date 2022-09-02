@@ -2,7 +2,6 @@ env.APP_NAME="k8s-16-statefulset"
 env.IMAGE_NAME="k8s-16.statefulset"
 
 env.GIT_URL="https://github.com/devops-onboard-sources/k8s-16-statefulset.git"
-env.GIT_BRANCH="main"
 
 env.K8S_NAMESPACE="study"
 env.K8S_REPLICAS="3"

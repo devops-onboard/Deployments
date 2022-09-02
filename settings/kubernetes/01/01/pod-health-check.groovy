@@ -1,7 +1,6 @@
 env.APP_NAME="k8s-01-01.pod-health-check"
 env.IMAGE_NAME="k8s-01-01.pod-health-check"
 env.GIT_URL="https://github.com/devops-onboard-sources/k8s-01-01-pod_health_check.git"
-env.GIT_BRANCH="main"
 env.K8S_NAMESPACE="study"
 env.K8S_REPLICAS="4"
 env.K8S_REQUEST_CPU="100m"
