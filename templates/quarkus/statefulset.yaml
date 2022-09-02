@@ -18,30 +18,30 @@ spec:
       - name: main
         image: "harbor.cluster.home.sanlea.com/study/${APP_NAME}:${APP_VERSION}"
         resources:
-            requests:
-              cpu: ${K8S_REQUEST_CPU}
-              memory: ${K8S_REQUEST_MEMORY}
-            limits:
-              cpu: ${K8S_LIMIT_CPU}
-              memory: ${K8S_LIMIT_MEMORY}
-          livenessProbe:
-            httpGet:
-              path: /q/health/live
-              port: 8080
-            initialDelaySeconds: 20
-            timeoutSeconds: 3
-            successThreshold: 1
-            failureThreshold: 3
-            periodSeconds: 10
-          readinessProbe:
-            httpGet:
-              path: /q/health/ready
-              port: 8080
-            initialDelaySeconds: 20
-            timeoutSeconds: 3
-            successThreshold: 1
-            failureThreshold: 3
-            periodSeconds: 10
+          requests:
+            cpu: ${K8S_REQUEST_CPU}
+            memory: ${K8S_REQUEST_MEMORY}
+          limits:
+            cpu: ${K8S_LIMIT_CPU}
+            memory: ${K8S_LIMIT_MEMORY}
+        livenessProbe:
+          httpGet:
+            path: /q/health/live
+            port: 8080
+          initialDelaySeconds: 20
+          timeoutSeconds: 3
+          successThreshold: 1
+          failureThreshold: 3
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /q/health/ready
+            port: 8080
+          initialDelaySeconds: 20
+          timeoutSeconds: 3
+          successThreshold: 1
+          failureThreshold: 3
+          periodSeconds: 10
         ports:
         - containerPort: 8080
           name: http
