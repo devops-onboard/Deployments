@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: main
-          image: "harbor.cluster.home.sanlea.com/study/${APP_NAME}:${APP_VERSION}"
+          image: "harbor.cluster.home.sanlea.com/study/${IMAGE_NAME}:${IMAGE_VERSION}"
           resources:
             requests:
               cpu: ${K8S_REQUEST_CPU}
