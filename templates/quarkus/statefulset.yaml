@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: ${APP_NAME}
-  serviceName: ${APP_NAME}
+  serviceName: ${K8S_SERVICE_NAME}
   replicas: ${K8S_REPLICAS}
   template:
     metadata:
